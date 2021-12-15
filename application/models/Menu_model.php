@@ -19,7 +19,7 @@ class Menu_model extends CI_Model
 		return $this->db->get_where($user, $where);
 	}
 
-	// modal untuk hapus Menu
+	// modal untuk hapus User
 	public function hapusUser($where, $user)
 	{
 		$this->db->where($where);
@@ -35,7 +35,6 @@ class Menu_model extends CI_Model
 	}
 
 	//modal untuk edit menu dan update menu
-
 	public function getEditMenu($where, $user_menu)
 	{
 		return $this->db->get_where($user_menu, $where);
