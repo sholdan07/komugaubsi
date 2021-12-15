@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 13, 2021 at 06:58 PM
+-- Generation Time: Dec 15, 2021 at 09:09 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.3.33
 
@@ -41,9 +41,8 @@ CREATE TABLE `event` (
 --
 
 INSERT INTO `event` (`id_event`, `nama_event`, `judul`, `deskripsi`, `link`, `tanggal`) VALUES
-(6, 'Mobile Legends', 'KING OF MLBB x MXM E-SPORT S2', 'Match Day : 1. Week 5 : 16 - 17 Desember 2021 2. Final League : 24 Desember 2021 Pendaftaran akan ditutup tanggal 16 Desember 2021 TM tanggal 15 - 16 Desember 2021 Biaya pendaftaran IDR 10.000,- / Slo', 'https://infotourney.com/tournament/mobile-legends/8022-turnamen-mobile-legends-king-of-mlbb-x-mxm-e-sport-s2-week-5', '2021-12-16'),
-(7, 'Mobile Legends', 'UZUMAKI ROJAK S2', 'Match Day : 17 - 18 Desember 2021 Pendaftaran ditutup tanggal 17 Desember 2021 TM tanggal 16 - 17 Desember 2021 Biaya pendaftaran IDR 15.000,- / Slot | IDR 20.000,- / 2 Slot (Solo Player IDR 10.000,- ', 'https://infotourney.com/tournament/mobile-legends/8026-turnamen-mobile-legends-uzumaki-rojak-s2', '2021-12-17'),
-(8, 'Mobile Legends', 'NEXON SEASON 8', 'Match Day : 17 - 19 Desember 2021 Pendaftaran akan ditutup tanggal 17 Desember 2021 TM tanggal 16 - 17 Desember 2021 Biaya pendaftaran GRATIS Venue : Online Skin Bebas All Rank/Tier No Chat All Custom', 'https://infotourney.com/tournament/mobile-legends/8025-turnamen-mobile-legends-nexon-season-8', '2021-12-17');
+(6, 'Mobile Legends', 'KING OF MLBB x MXM E-SPORT S2', 'Match Day : 1. Week 5 : 16 - 17 Desember 2021 2. Final League : 24 Desember 2021 Pendaftaran akan ditutup tanggal 16 Desember 2021 TM tanggal 15 - 16 Desember 2021 Biaya pendaftaran IDR 10.000,- / Slo', 'https://infotourney.com/tournament/mobile-legends/8022-turnamen-mobile-legends-king-of-mlbb-x-mxm-e-sport-s2-week-5', '2021-12-15'),
+(7, 'Mobile Legends', 'UZUMAKI ROJAK S2', 'Match Day : 17 - 18 Desember 2021 Pendaftaran ditutup tanggal 17 Desember 2021 TM tanggal 16 - 17 Desember 2021 Biaya pendaftaran IDR 15.000,- / Slot | IDR 20.000,- / 2 Slot (Solo Player IDR 10.000,- ', 'https://infotourney.com/tournament/mobile-legends/8026-turnamen-mobile-legends-uzumaki-rojak-s2', '2021-12-16');
 
 -- --------------------------------------------------------
 
@@ -68,7 +67,8 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `name`, `email`, `image`, `password`, `role_id`, `is_active`, `date_created`) VALUES
 (1, 'Abdullah Sholdan', 'admin@klp5.com', 'foto_Sholdan.jpeg', '$2y$10$zIYL2Vg21nHPoLLL6lXmAOKRBqTPjPVzZTa144fkRLchuEb2g6/ze', 1, 1, 1637650272),
-(5, 'user', 'user@coba.com', 'default.jpg', '$2y$10$HK6LaB0NXqTrc3xRToINZudj0lU7oDa5kyTPdl/efrC80r8LafRuS', 3, 1, 1638174682);
+(5, 'user', 'user@coba.com', 'default.jpg', '$2y$10$HK6LaB0NXqTrc3xRToINZudj0lU7oDa5kyTPdl/efrC80r8LafRuS', 2, 1, 1638174682),
+(6, 'Dheksa', 'dheksa@klp5.com', 'logo_ubsi.png', '$2y$10$8wNZ2o08mw9XTTz94Ink.OTWsE2GCofQtyHQlBbMWHcM5kQ9lr01W', 2, 1, 1639418334);
 
 -- --------------------------------------------------------
 
@@ -165,7 +165,8 @@ INSERT INTO `user_sub_menu` (`id`, `menu_id`, `title`, `url`, `icon`, `is_active
 (7, 3, 'User Management', 'menu/data', 'fas fa-fw fa-user', 1),
 (9, 2, 'Change Password', 'user/changepassword', 'fas fa-fw fa-key', 1),
 (10, 4, 'Desember 2021', 'pengumuman/index', 'fas fa-fw fa-bullhorn', 1),
-(11, 3, 'Event Management', 'menu/event', 'fas fa-fw fa-calendar-alt', 1);
+(11, 3, 'Event Management', 'menu/event', 'fas fa-fw fa-calendar-alt', 1),
+(13, 5, 'KOPDAR', 'komunitas/index', 'fas fa-fw fa-calendar-alt', 1);
 
 --
 -- Indexes for dumped tables
@@ -221,19 +222,19 @@ ALTER TABLE `event`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `user_access_menu`
 --
 ALTER TABLE `user_access_menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `user_menu`
 --
 ALTER TABLE `user_menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `user_role`
@@ -245,7 +246,7 @@ ALTER TABLE `user_role`
 -- AUTO_INCREMENT for table `user_sub_menu`
 --
 ALTER TABLE `user_sub_menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
